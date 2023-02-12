@@ -20,4 +20,5 @@
 ![image](https://i.imgur.com/GtsS1iX.png)
 
 6-Imagen de la factura Generada
+
 ![image](https://i.imgur.com/FSsReEN.png)
