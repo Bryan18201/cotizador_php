@@ -7,7 +7,7 @@
 
 
         <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top bottom-0 ">
-          <p><b>Creado por Bryan José Mañon Colón © 2023 </b></p>
+          <p><b>Creado por Bryan José Mañon Colón ©2023 </b></p>
           <ul class="list-unstyled d-flex ">
             <li class="ms-3"><a class="link-dark" href="#">
             <i class="fa-brands fa-twitter fa-2xl"></i>

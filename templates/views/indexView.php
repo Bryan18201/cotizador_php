@@ -9,30 +9,9 @@
     </div>
     <div class="row">
       <div class="col-lg-7 col-12 ">
+        
         <div class="card mb-3">
-          <div class="card-header"><b>Información del cliente</b></div>
-          <div class="card-body">
-            <form action="">
-              <div class="form-group row">
-                <div class="col-4">
-                  <label for="nombre">Nombre</label>
-                  <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Bryan José" required>
-                </div>
-                <div class="col-4">
-                  <label for="empresa">Empresa</label>
-                  <input type="text" class="form-control" id="empresa" name="empresa" placeholder="Altice" required>
-                </div>
-                <div class="col-4">
-                  <label for="email">E-mail</label>
-                  <input type="email" class="form-control" id="email" name="email" placeholder="walter@gmail.com" required>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-header"><b>Agregar nuevo concepto</b></div>
+          <div class="card-header"><b>1- Agregar nuevo concepto</b></div>
           <div class="card-body">
             <form id="add_to_quote" method="POST">
               <div class="form-group row">
@@ -67,9 +46,31 @@
             </form>
           </div>
         </div>
+
+        <div class="card mb-3">
+          <div class="card-header"><b>2- Información del cliente</b></div>
+          <div class="card-body">
+            <form action="">
+              <div class="form-group row">
+                <div class="col-4">
+                  <label for="nombre">Nombre</label>
+                  <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Bryan José" required>
+                </div>
+                <div class="col-4">
+                  <label for="empresa">Empresa</label>
+                  <input type="text" class="form-control" id="empresa" name="empresa" placeholder="Altice" required>
+                </div>
+                <div class="col-4">
+                  <label for="email">E-mail</label>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="walter@gmail.com" required>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
 
-      <div class="col-lg-5 col-12">
+      <div class="col-lg-5 col-12 ">
         <div class="wrapper_update_concept" style="display: none;">
           <div class="card mb-3">
             <div class="card-header">Editando concepto</div>

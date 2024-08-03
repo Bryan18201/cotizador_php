@@ -6,7 +6,7 @@
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <strong><?php echo APP_NAME; ?></strong>
-          <i class="fa-solid fa-shop " ></i> 
+          <i class="fa-solid fa-shop "></i>
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
@@ -19,15 +19,15 @@
           </div>
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-                <a class="nav-link" href="#" target="blank">WhatsApp <i class="fa-brands fa-whatsapp"></i></a>
-                
+              <li class="nav-item">
+                <a class="nav-link" href="https://api.whatsapp.com/send?phone=18098202485" target="blank">WhatsApp <i class="fa-brands fa-whatsapp"></i></a>
+
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" target="blank">Portafolio <i class="fa-solid fa-paperclip"></i> </a>
+                <a class="nav-link" href="https://bmcv.netlify.app/" target="blank">Portafolio <i class="fa-solid fa-paperclip"></i> </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" target="blank">Código fuente de la pagina <i class="fa-solid fa-code"></i></a>
+                <a class="nav-link" href="https://github.com/Bryan18201/cotizador_php?tab=readme-ov-file" target="blank">Código fuente de la pagina <i class="fa-solid fa-code"></i></a>
               </li>
 
           </div>

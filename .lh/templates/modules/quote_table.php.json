@@ -1,0 +1,18 @@
+{
+    "sourceFile": "templates/modules/quote_table.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1693840960617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1693840960617,
+            "name": "Commit-0",
+            "content": "<?php if (empty($d->items)): ?>\r\n  <div class=\"text-center\">\r\n    <h3>La cotización está vacía</h3>\r\n    <img src=\"<?php echo IMG.'empty.png'; ?>\" alt=\"Sin contenido\" class=\"img-fluid\" style=\"width: 150px;\">\r\n  </div>\r\n<?php else: ?>\r\n  <h3 class=\"text-danger\"><?php echo sprintf('Cotización #%s' , $d->number); ?></h3>\r\n  <div class=\"table-responsive\">\r\n    <table class=\"table table-hover table-striped table-bordered\">\r\n      <thead>\r\n        <tr>\r\n          <th></th>\r\n          <th>Concepto</th>\r\n          <th>Precio</th>\r\n          <th class=\"text-center\">Cantidad</th>\r\n          <th class=\"text-right\">Subtotal</th>\r\n        </tr>\r\n      </thead>\r\n      <tbody>\r\n        <?php foreach ($d->items as $item): ?>\r\n          <tr>\r\n            <td>\r\n              <div class=\"btn-group\">\r\n                <button class=\"btn btn-sm btn-success edit_concept\" data-id=\"<?php echo $item->id; ?>\">Editar</button>\r\n                <button class=\"btn btn-sm btn-danger delete_concept\" data-id=\"<?php echo $item->id; ?>\">Borrar</button>\r\n              </div>\r\n            </td>\r\n            <td>\r\n              <?php echo $item->concept; ?>\r\n              <small class=\"text-muted d-block\">\r\n                <img src=\"<?php echo IMG.($item->type === 'producto' ? 'product.png' : 'service.png'); ?>\" alt=\"<?php echo $item->concept; ?>\" style=\"width: 15px;\">\r\n                <?php echo $item->type === 'producto' ? 'Producto' : 'Servicio'; ?>\r\n              </small>\r\n            </td>\r\n            <td><?php echo '$'.number_format($item->price, 2); ?></td>\r\n            <td class=\"text-center\"><?php echo $item->quantity; ?></td>\r\n            <td class=\"text-end\"><?php echo '$'.number_format($item->total, 2); ?></td>\r\n          </tr>\r\n        <?php endforeach; ?>\r\n        <tr>\r\n          <td class=\"text-end\" colspan=\"4\">Subtotal</td>\r\n          <td class=\"text-end\"><?php echo '$'.number_format($d->subtotal, 2); ?></td>\r\n        </tr>\r\n        <tr>\r\n          <td class=\"text-end\" colspan=\"4\">Impuestos</td>\r\n          <td class=\"text-end\"><?php echo '$'.number_format($d->taxes, 2); ?></td>\r\n        </tr>\r\n        <tr>\r\n          <td class=\"text-end\" colspan=\"4\">Envío</td>\r\n          <td class=\"text-end\"><?php echo '$'.number_format($d->shipping, 2); ?></td>\r\n        </tr>\r\n        <tr>\r\n          <td class=\"text-end\" colspan=\"5\">\r\n            <b>Total</b><h3 class=\"text-success\"><b><?php echo '$'.number_format($d->total, 2); ?></b></h3>\r\n            <small class=\"text-muted\"><?php echo sprintf('Impuestos incluidos %s%% IVA', TAXES_RATE); ?></small>\r\n          </td>\r\n        </tr>\r\n      </tbody>\r\n    </table>\r\n  </div>\r\n<?php endif; ?>"
+        }
+    ]
+}

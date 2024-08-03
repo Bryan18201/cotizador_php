@@ -487,28 +487,28 @@ function redirect($route) {
 }
 
 // Enviar nuevo correo electrónico
-function send_mail($data) {
-  $mail          = new PHPMailer();
-  $mail->setFrom(APP_EMAIL, APP_NAME); // remitente
-  $mail->addAddress($data['email'], empty($data['name']) ? null : $data['name']); // destinatario
-  $mail->Subject = $data['subject']; // asunto
-  $mail->msgHTML(get_module(MODULES.'email_template', $data)); // plantilla
-  $mail->AltBody = $data['alt_text']; // alternativo
-  $mail->CharSet = 'UTF-8'; // chartset
+// function send_mail($data) {
+//   $mail          = new PHPMailer();
+//   $mail->setFrom(APP_EMAIL, APP_NAME); // remitente
+//   $mail->addAddress($data['email'], empty($data['name']) ? null : $data['name']); // destinatario
+//   $mail->Subject = $data['subject']; // asunto
+//   $mail->msgHTML(get_module(MODULES.'email_template', $data)); // plantilla
+//   $mail->AltBody = $data['alt_text']; // alternativo
+//   $mail->CharSet = 'UTF-8'; // chartset
 
-  // Adjuntos
-  if(!empty($data['attachments'])) {
-    foreach ($data['attachments'] as $file) {
-      $mail->addAttachment($file);
-    }
-  }
+//   // Adjuntos
+//   if(!empty($data['attachments'])) {
+//     foreach ($data['attachments'] as $file) {
+//       $mail->addAttachment($file);
+//     }
+//   }
 
-  if(!$mail->send()) {
-    return false;
-  }
+//   if(!$mail->send()) {
+//     return false;
+//   }
 
-  return true;
-}
+//   return true;
+// }
 
 function hook_send_quote() {
   if(!isset($_POST['number'])) {
